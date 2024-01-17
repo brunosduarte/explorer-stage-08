@@ -1,15 +1,16 @@
 require ("express-async-errors");
 require("dotenv/config");
-const migrationsRun = require("./database/sqlite/migrations")
+
 const uploadConfig= require("./configs/upload")
+
+const migrationsRun = require("./database/sqlite/migrations")
 const AppError = require("./utils/AppError")
 
-const cors = require("cors");
 const express = require("express");
+const cors = require("cors");
+const routes = require("./routes");
 
 migrationsRun();
-
-const routes = require("./routes");
 
 const app = express();
 app.use(cors());
@@ -53,4 +54,4 @@ Patch = Atualização Parcial
 
 */
 
-//fgdjifdskfsdf54641684
+//cef60bf94db4dbf14d73c98d4cfee892
